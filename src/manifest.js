@@ -19,6 +19,12 @@ const manifest = {
 			matches: ['*://*/*'],
 		},
 	],
+	web_accessible_resources: [
+		{
+			resources: ['*'],
+			matches: ['*://*/*'],
+		},
+	],
 	host_permissions: ['*://*/*'],
 	icons: {
 		16: 'icons/16.png',

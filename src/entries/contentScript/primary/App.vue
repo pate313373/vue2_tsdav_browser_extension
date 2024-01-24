@@ -1,6 +1,7 @@
 <template>
 	<div class="logo">
 		<img :src="logoImageUrl" height="50" alt="" />
+		<p>appending this to the page content</p>
 	</div>
 </template>
 

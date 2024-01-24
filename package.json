@@ -11,7 +11,7 @@
     "dev": "vite",
     "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
     "serve:chrome": "web-ext run -t chromium --start-url \"https://example.com\" --source-dir ./dist/",
-		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "license": "MIT",
   "devDependencies": {
@@ -28,12 +28,17 @@
     "web-ext": "^7.8.0"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "gmap-vue": "^3.5.4",
     "ics": "^3.5.0",
+    "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
     "luxon": "^3.4.4",
     "pinia": "^2.0.16",
     "tsdav": "^2.0.5",
     "vue": "^2.7.7",
+    "vue2-leaflet": "^2.7.1",
+    "vuetify": "^2.7.1",
     "webextension-polyfill": "^0.10.0"
   },
   "overrides": {

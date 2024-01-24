@@ -4,7 +4,8 @@
 		<h1>
 			<slot></slot>
 		</h1>
-		<button type="button" @click="increment">Clicks: {{ count }}</button>
+		<v-btn @click="increment">Clicks: {{ count }}</v-btn>
+		<v-btn @click="increment" icon><v-icon>mdi-plus</v-icon></v-btn>
 	</div>
 </template>
 

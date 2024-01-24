@@ -3,7 +3,7 @@
 	"editor.guides.bracketPairs":"active",
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.workingDirectories": [
     "./node_modules/eslint/bin/eslint.js"

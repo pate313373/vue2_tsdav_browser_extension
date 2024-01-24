@@ -1,11 +1,12 @@
 import Vue from 'vue';
-import { createPinia, PiniaVuePlugin } from 'pinia';
+import { vuetify, pinia } from '@/plugins';
 
 import App from './App.vue';
 
-Vue.use(PiniaVuePlugin);
-
 new Vue({
-	pinia: createPinia(),
+	pinia,
+	vuetify,
 	render: (h) => h(App),
 }).$mount('#app');
+
+console.log('Vue app mounted.');

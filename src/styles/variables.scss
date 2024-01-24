@@ -1,0 +1,364 @@
+// globals
+.v-card__subtitle,
+.v-card__text,
+.v-card__title {
+	padding: 16px;
+}
+
+//Standard font-size of VUETIFY is 16px/1rem/1.2em
+//Just another option to do font games
+// $font-size-root: 16px;
+//$input-font-size: 1rem;
+// 1rem = 16px
+// 0.0625rem = 1px
+//0.85rem = 12px
+//0.6875rem = 11px
+
+.v-input {
+    font-size: 0.7rem;
+}
+.v-input .v-label {
+    font-size: 0.7rem;
+	padding-right: 1rem;
+}
+.v-input .v-label--active {
+    font-size: 0.85rem;
+}
+
+.v-application--is-ltr .v-list-item__action:first-child, .v-application--is-ltr .v-list-item__icon:first-child {
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+// .v-list--dense .v-list-item .v-list-item__title, .v-list--dense .v-list-item .v-list-item__subtitle {
+//     font-size: 0.7rem;
+//     font-weight: 400;
+//     line-height: 1rem;
+// }
+.navigationList .v-list .v-list-item .v-list-item__title, .v-list--dense .v-list-item .v-list-item__subtitle {
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+
+// .navigationList .v-list--dense .v-list-item .v-list-item__title, .v-list--dense .v-list-item .v-list-item__subtitle {
+//     font-size: 0.7;
+//     font-weight: 400;
+//     line-height: 1rem;
+// }
+.v-list {
+    padding: 0px;
+}
+
+// ToDo: the below has been disabled to use Vite
+@import 'vuetify/src/styles/settings/_variables';
+@media #{map-get($display-breakpoints, 'sm-and-down')} {
+	.v-list-item{
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+}
+
+// .v-list-item{
+// 	padding-left: 8px;
+// 	padding-right: 4px;
+// }
+
+.v-dialog{
+	border-radius: 0px;
+}
+
+// dark theme
+.v-text-field.v-text-field--enclosed .v-text-field__details {
+	margin-bottom: 0;
+}
+
+.theme--dark.v-btn.v-btn--has-bg {
+	background-color: #1976d2;
+}
+.theme--dark.v-list-item--link {
+	color: white;
+}
+.theme--dark.v-list-item .v-list-item__mask {
+	color: #ffffff;
+	background: rgba(#ffffff, 0.3);
+}
+
+$material-dark: (
+	'background': #1e1e1e,
+	'app-bar': #272727,
+	'cards': #272727,
+	'bottom-navigation': #2e2e2e,
+	'surface': #121212,
+	'status-bar': (
+		'regular': #000000,
+		'lights-out': rgba(#000000, 0.2),
+	),
+	'calendar': (
+		'background-color': #303030,
+		'outside-background-color': #202020,
+		'weeknumber-background-color': #202020,
+		'line-color': #9e9e9e,
+		'interval-color': #eeeeee,
+		'interval-line-color': #616161,
+		'text-color': #ffffff,
+		'past-color': rgba(#ffffff, 0.5),
+	),
+	'chips': #555,
+	'code': (
+		'background': rgba(#ffffff, 0.1),
+		'color': currentColor,
+	),
+	'kbd': (
+		'background': #212529,
+		'color': #ffffff,
+	),
+	'dividers': rgba(#ffffff, 0.12),
+	'text': (
+		'theme': #ffffff,
+		'primary': #ffffff,
+		'secondary': rgba(#ffffff, 0.7),
+		'disabled': rgba(#ffffff, 0.5),
+		'link': #82b1ff,
+		'link-hover': #eeeeee,
+	),
+	'icons': (
+		'active': #ffffff,
+		'inactive': rgba(#ffffff, 0.5),
+	),
+	'inputs': (
+		'box': #ffffff,
+		'solo-inverted': rgba(#ffffff, 0.16),
+		'solo-inverted-focused': #ffffff,
+		'solo-inverted-focused-label': rgba(#000000, 0.6),
+		'solo-inverted-focused-placeholder': rgba(#000000, 0.38),
+		'solo-inverted-focused-text': rgba(#000000, 0.87),
+	),
+	'buttons': (
+		'disabled': rgba(#ffffff, 0.3),
+		'focused': rgba(#ffffff, 0.12),
+		'focused-alt': rgba(#ffffff, 0.1),
+		'pressed': rgba(#ccc, 0.25),
+	),
+	'expansion-panels': (
+		'focus': #494949,
+	),
+	'navigation-drawer': #292929,
+	'selection-controls': (
+		'disabled': rgba(#ffffff, 0.3),
+		'thumb': (
+			'inactive': #bdbdbd,
+			'disabled': #424242,
+		),
+		'track': (
+			'inactive': rgba(#ffffff, 0.3),
+			'disabled': rgba(#ffffff, 0.1),
+		),
+	),
+	'slider': (
+		'active': rgba(#ffffff, 0.3),
+		'inactive': rgba(#ffffff, 0.2),
+		'disabled': rgba(#ffffff, 0.2),
+		'discrete': #ffffff,
+	),
+	'skeleton': linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)),
+	'states': (
+		'hover': 0.08,
+		'focus': 0.24,
+		'selected': 0.16,
+		'activated': 0.24,
+		'pressed': 0.32,
+		'dragged': 0.16,
+	),
+	'tabs': rgba(#ffffff, 0.6),
+	'toggle-buttons': (
+		'color': #ffffff,
+	),
+	'text-fields': (
+		'filled': rgba(#ffffff, 0.08),
+		'filled-hover': rgba(#ffffff, 0.16),
+		'outlined': rgba(#ffffff, 0.24),
+		'outlined-disabled': rgba(#ffffff, 0.16),
+		'outlined-hover': #ffffff,
+	),
+	'input-bottom-line': rgba(#ffffff, 0.7),
+	'stepper': (
+		'active': rgba(#ffffff, 1),
+		'completed': rgba(#ffffff, 0.87),
+		'hover': rgba(#ffffff, 0.75),
+	),
+	'table': (
+		'active': #505050,
+		'hover': #616161,
+		'group': #616161,
+	),
+	'toolbar': #292929,
+	'picker': (
+		'body': #424242,
+		'clock': #616161,
+		'indeterminateTime': #424242,
+		'title': #616161,
+	),
+	'color-picker': (
+		'checkerboard': rgba(#ffffff, 0.12),
+	),
+	'bg-color': #303030,
+	'fg-color': #ffffff,
+	'text-color': #ffffff,
+	'primary-text-percent': 1,
+	'secondary-text-percent': 0.7,
+	'disabledORhints-text-percent': 0.5,
+	'divider-percent': 0.12,
+	'active-icon-percent': 1,
+	'inactive-icon-percent': 0.5,
+);
+
+
+
+
+
+// light theme
+
+.theme--light.v-btn.v-btn--has-bg {
+	background-color: #FFAA00;
+}
+.theme--light.v-list-item--link {
+	color: black;
+}
+.theme--light.v-list-item .v-list-item__mask {
+	color: rgba(#000000, 0.87);
+	background: rgba(#000000, 0.15);
+}
+$material-light: (
+	'app-bar': #f0f0f0,
+	'background': #dcdcdc,
+	'cards': #f4f4f4,
+	'bottom-navigation': #ffffff,
+	'surface': #ffffff,
+	'status-bar': (
+		'regular': #000000,
+		'lights-out': rgba(#000000, 0.2),
+	),
+	'calendar': (
+		'background-color': #ffffff,
+		'outside-background-color': #f7f7f7,
+		'weeknumber-background-color': #f1f3f4,
+		'line-color': #e0e0e0,
+		'interval-color': #424242,
+		'interval-line-color': #e0e0e0,
+		'text-color': #000000,
+		'past-color': rgba(#000000, 0.38),
+	),
+	'chips': #e0e0e0,
+	'code': (
+		'background': rgba(#000000, 0.05),
+		'color': currentColor,
+	),
+	'kbd': (
+		'background': #212529,
+		'color': #ffffff,
+	),
+	'dividers': rgba(#000000, 0.12),
+	'text': (
+		'theme': #ffffff,
+		'primary': rgba(#000000, 0.87),
+		'secondary': rgba(#000000, 0.6),
+		'disabled': rgba(#000000, 0.38),
+		'link': #616161,
+		'link-hover': #424242,
+	),
+	'icons': (
+		'active': rgba(#000000, 0.38),
+		'inactive': rgba(#000000, 0.38),
+	),
+	'inputs': (
+		'box': rgba(#000000, 0.04),
+		'solo-inverted': rgba(#000000, 0.06),
+		'solo-inverted-focused': #424242,
+		'solo-inverted-focused-label': rgba(#ffffff, 0.7),
+		'solo-inverted-focused-placeholder': rgba(#ffffff, 0.5),
+		'solo-inverted-focused-text': #ffffff,
+	),
+	'buttons': (
+		'disabled': rgba(#000000, 0.26),
+		'focused': rgba(#000000, 0.12),
+		'focused-alt': rgba(#ffffff, 0.6),
+		'pressed': rgba(#999, 0.4),
+	),
+	'expansion-panels': (
+		'focus': #424242,
+	),
+	'navigation-drawer':  	#465156,
+	'selection-controls': (
+		'disabled': rgba(#000000, 0.26),
+		'thumb': (
+			'inactive': #ffffff,
+			'disabled': #fafafa,
+		),
+		'track': (
+			'inactive': rgba(#000000, 0.38),
+			'disabled': rgba(#000000, 0.12),
+		),
+	),
+	'slider': (
+		'active': rgba(#000000, 0.38),
+		'inactive': rgba(#000000, 0.26),
+		'disabled': rgba(#000000, 0.26),
+		'discrete': #000000,
+	),
+	'skeleton': linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)),
+	'states': (
+		'hover': 0.04,
+		'focus': 0.12,
+		'selected': 0.08,
+		'activated': 0.12,
+		'pressed': 0.16,
+		'dragged': 0.08,
+	),
+	'tabs': rgba(0, 0, 0, 0.54),
+	'toggle-buttons': (
+		'color': #000000,
+	),
+	'text-fields': (
+		'filled': rgba(#000000, 0.06),
+		'filled-hover': rgba(#000000, 0.12),
+		'outlined': rgba(#000000, 0.38),
+		'outlined-disabled': rgba(#000000, 0.26),
+		'outlined-hover': rgba(#000000, 0.86),
+	),
+	'toolbar': #ffffff,
+	'input-bottom-line': rgba(#000000, 0.42),
+	'stepper': (
+		'active': rgba(#ffffff, 1),
+		'completed': rgba(#000000, 0.87),
+		'hover': rgba(#000000, 0.54),
+	),
+	'table': (
+		'active': #f5f5f5,
+		'hover': #eeeeee,
+		'group': #eeeeee,
+	),
+	'picker': (
+		'body': #ffffff,
+		'clock': #e0e0e0,
+		'indeterminateTime': #bdbdbd,
+		'title': #e0e0e0,
+	),
+	'color-picker': (
+		'checkerboard': rgba(#ffffff, 0),
+	),
+	'bg-color': #ffffff,
+	'fg-color': #000000,
+	'text-color': #000000,
+	'primary-text-percent': 0.87,
+	'secondary-text-percent': 0.6,
+	'disabledORhints-text-percent': 0.38,
+	'divider-percent': 0.12,
+	'active-icon-percent': 0.54,
+	'inactive-icon-percent': 0.38,
+);
